@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/sharl/OneDrive/Desktop/velisa/mern/authjs-1/actions/auth.ts"],"sourcesContent":["\"use server\";\r\nimport { signIn, signOut } from \"@/auth\";\r\nimport { revalidatePath } from \"next/cache\";\r\n\r\nexport const login = async (provider: string) => {\r\n  await signIn(provider, { redirectTo: \"/\" });\r\n  revalidatePath(\"/\");\r\n};\r\n\r\nexport const logout = async () => {\r\n  await signOut({ redirectTo: \"/\" });\r\n  revalidatePath(\"/\");\r\n};\r\n"],"names":[],"mappings":";;;;;;AACA;AACA;;;;;;;;;;AAEO,MAAM,QAAQ,OAAO;IAC1B,MAAM,CAAA,GAAA,oGAAA,CAAA,SAAM,AAAD,EAAE,UAAU;QAAE,YAAY;IAAI;IACzC,CAAA,GAAA,6HAAA,CAAA,iBAAc,AAAD,EAAE;AACjB;AAEO,MAAM,SAAS;IACpB,MAAM,CAAA,GAAA,oGAAA,CAAA,UAAO,AAAD,EAAE;QAAE,YAAY;IAAI;IAChC,CAAA,GAAA,6HAAA,CAAA,iBAAc,AAAD,EAAE;AACjB;;;IARa;IAKA;;AALA,+OAAA;AAKA,+OAAA","debugId":null}},
+    {"offset": {"line": 50, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/sharl/OneDrive/Desktop/velisa/mern/authjs-1/.next-internal/server/app/page/actions.js%20%28server%20actions%20loader%29"],"sourcesContent":["export {logout as '7fea410f5bbbcda95e5c05bf7910bc73592b7f6de5'} from 'ACTIONS_MODULE0'\n"],"names":[],"mappings":";AAAA","debugId":null}},
+    {"offset": {"line": 125, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/sharl/OneDrive/Desktop/velisa/mern/authjs-1/app/page.tsx"],"sourcesContent":["import React from \"react\";\n\nconst Home = () => {\n  return <div></div>;\n};\n\nexport default Home;\n"],"names":[],"mappings":";;;;;AAEA,MAAM,OAAO;IACX,qBAAO,8OAAC;;;;;AACV;uCAEe","debugId":null}}]
+}
