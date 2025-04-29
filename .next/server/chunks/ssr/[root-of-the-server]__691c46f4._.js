@@ -70,14 +70,6 @@ const mod = __turbopack_context__.x("crypto", () => require("crypto"));
 
 module.exports = mod;
 }}),
-"[externals]/@prisma/client [external] (@prisma/client, cjs)": (function(__turbopack_context__) {
-
-var { g: global, __dirname, m: module, e: exports } = __turbopack_context__;
-{
-const mod = __turbopack_context__.x("@prisma/client", () => require("@prisma/client"));
-
-module.exports = mod;
-}}),
 "[project]/app/prisma.ts [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -87,10 +79,14 @@ var { g: global, __dirname } = __turbopack_context__;
 __turbopack_context__.s({
     "prisma": (()=>prisma)
 });
-var __TURBOPACK__imported__module__$5b$externals$5d2f40$prisma$2f$client__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/@prisma/client [external] (@prisma/client, cjs)");
+(()=>{
+    const e = new Error("Cannot find module '@/app/lib/prisma-client'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
 ;
 const globalForPrisma = global;
-const prisma = globalForPrisma.prisma || new __TURBOPACK__imported__module__$5b$externals$5d2f40$prisma$2f$client__$5b$external$5d$__$2840$prisma$2f$client$2c$__cjs$29$__["PrismaClient"]();
+const prisma = globalForPrisma.prisma || new PrismaClient();
 if ("TURBOPACK compile-time truthy", 1) globalForPrisma.prisma = prisma;
 }}),
 "[externals]/@prisma/client/runtime/library [external] (@prisma/client/runtime/library, esm_import)": ((__turbopack_context__) => {
@@ -368,4 +364,4 @@ __turbopack_async_result__();
 
 };
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__26e34c53._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__691c46f4._.js.map

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import LoginGithub from "@/components/general/LoginGithub";
 import { login } from "@/actions/auth";

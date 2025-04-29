@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/sharl/OneDrive/Desktop/velisa/mern/authjs-1/actions/auth.ts"],"sourcesContent":["\"use server\";\r\nimport { signIn, signOut } from \"@/auth\";\r\nimport { revalidatePath } from \"next/cache\";\r\n\r\nexport const login = async (provider: string) => {\r\n  await signIn(provider, { redirectTo: \"/\" });\r\n  revalidatePath(\"/\");\r\n};\r\n\r\nexport const logout = async () => {\r\n  await signOut({ redirectTo: \"/\" });\r\n  revalidatePath(\"/\");\r\n};\r\n"],"names":[],"mappings":";;;;;;IASa,SAAA,WAAA,GAAA,CAAA,GAAA,yNAAA,CAAA,wBAAA,EAAA,8CAAA,yNAAA,CAAA,aAAA,EAAA,KAAA,GAAA,yNAAA,CAAA,mBAAA,EAAA","debugId":null}},
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/sharl/OneDrive/Desktop/velisa/mern/authjs-1/components/general/Logout.tsx"],"sourcesContent":["\"use client\";\r\nimport { logout } from \"@/actions/auth\";\r\n\r\nconst Logout = () => {\r\n  return (\r\n    <div onClick={() => logout()}>\r\n      <div className=\"bg-gray-600 text-white text-sm px-4 py-2 rounded-md cursor-pointer\">\r\n        logout\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Logout;\r\n"],"names":[],"mappings":";;;;AACA;AADA;;;AAGA,MAAM,SAAS;IACb,qBACE,6LAAC;QAAI,SAAS,IAAM,CAAA,GAAA,kJAAA,CAAA,SAAM,AAAD;kBACvB,cAAA,6LAAC;YAAI,WAAU;sBAAqE;;;;;;;;;;;AAK1F;KARM;uCAUS","debugId":null}}]
+}
